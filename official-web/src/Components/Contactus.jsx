@@ -46,7 +46,7 @@ const Contactus = () => {
     id='contact-us' className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 
       pt-30 text-gray-700 dark:text-white dark:bg-black
     '>
-      <Title title='Reach out to us' desc='From strategy to execution, we craft digital solutions that move your business forward.'/>
+      <Title title='Reach out to us' desc='Connecting farmers and bulk buyers — reach out to us for partnerships, support, or business inquiries.'/>
       <motion.form 
                initial={{opacity:0, y:30}}
                whileInView ={{opacity:0.5,y:4}}
@@ -75,7 +75,7 @@ const Contactus = () => {
               <textarea rows={8} placeholder='Enter your message' name = "message" className='w-full p-3 text-sm outline-none rounded-bg border border-gray-300 dark:border-gray-600' required/>
            </div>
 
-           <button type='submit'  className='w-max flex gap-2 bg-primary text-white text-sm px-10 py-3 rounded-full cursor-pointer hover:scale-103 transition-all'>Submit<img src={assets.arrow_icon} alt="" className='w-4'/></button>
+           <button type='submit'  className='w-max flex gap-2 bg-secondary text-white text-sm px-10 py-3 rounded-full cursor-pointer hover:scale-103 transition-all'>Submit<img src={assets.arrow_icon} alt="" className='w-4'/></button>
       </motion.form>
     </motion.div>
   )

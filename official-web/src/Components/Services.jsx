@@ -7,24 +7,24 @@ import {motion} from 'framer-motion'
 const Services = () => {
   const servicesData  = [
             {
-                title:'Advertising',
-                description:'We turn bold ideas into powerful digital solutions that connect, engage...',
+                title:'Direct Farmer-to-Consumer Marketplace',
+                description:'A transparent digital marketplace where farmers sell vegetables directly to consumers — eliminating middlemen and ensuring fair prices for farmers and fresh produce for buyers.',
                 icon:assets.ads_icon
             },
             {
-                title:'Content marketing',
-                description:'We help you execute your plan and deliver results.',
+                title:'Bulk Buying for Retailers & Businesses',
+                description:'A dedicated service for shop owners, restaurants, hotels, and wholesalers to purchase vegetables in bulk quantities directly from farmers at competitive rates.',
                 icon:assets.marketing_icon
             },
             {
-                title:'Content writing',
-                description:'We help you create a marketing strategy that drives results.',
+                title:'Fair Pricing & Transparent Transactions',
+                description:'We provide clear pricing, no hidden commissions, and complete transaction transparency so both farmers and buyers know exactly what they’re paying and earning..',
                 icon:assets.content_icon
             },
             {
-                title:'Social media',
-                description:'We help you build a social media presence and engage with your audience',
-                icon:assets.social_icon
+                title:'Digital Empowerment for Farmers',
+                description:'We help farmers list their produce, manage orders, track sales, and receive payments digitally, enabling them to participate confidently in the modern digital economy.',
+                icon:assets.dg_removed
             }
     
     

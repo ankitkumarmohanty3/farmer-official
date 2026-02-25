@@ -4,10 +4,10 @@ import group_profile from './group_profile.png'
 import bgImage1 from './bgImage1.png'
 import bgImage2 from './bgImage2.png'
 import hero_img from './hero_img.png'
-import microsoft_logo from './microsoft_logo.png'
-import zoom_logo from './zoom_logo.png'
-import rakuten_logo from './rakuten_logo.png'
-import coinbase_logo from './coinbase_logo.png'
+import spencer_logo from './company1-farmer.jpg'
+import homely_farmer from './homely-farmer.png'
+import hyperpure_farmer from './hyperpure-farmer.png'
+import overstory_farmer from './overstory-farmer.png'
 import ads_icon from './ads_icon.svg'
 import content_icon from './content_icon.svg'
 import marketing_icon from './marketing_icon.svg'
@@ -24,20 +24,29 @@ import twitter_icon from './twitter_icon.svg'
 import instagram_icon from './instagram_icon.svg'
 import linkedin_icon from './linkedin_icon.svg'
 import logo_dark from './logo_dark.svg'
-import airbnb_logo from './airbnb_logo.svg'
-import google_logo from './google_logo.svg'
+import reliance_farmer from './reliance-farmer.png'
+import freshmenu_farmer from './freshmenu-farmer.png'
 import menu_icon_dark from './menu_icon_dark.svg'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
-
+import hero_farmer from './farmer-hero.jpg'
+import farmerbl_logo from './farmer-logo.jpeg'
+import farmerwh_logo from './farmerwh-logo.jpeg'
+import payment_farmer from './payment-farmer.jpg'
+import bulk_farmer from './bulk-famer.webp'
+import direct_farmer from './direct-farmer.webp'
+import bg_removedlogo from './farmer-logo-removebg-preview.png'
+import dg_removed from './removeddark.png'
+import wh_cart from './wh_cart.png'
+import black_cart from './blk_cart.png'
 
 export const company_logos = [
-  microsoft_logo,
-  zoom_logo,
-  rakuten_logo,
-  coinbase_logo,
-  airbnb_logo,
-  google_logo,
+  reliance_farmer,
+  spencer_logo,
+  freshmenu_farmer,
+  overstory_farmer,
+  hyperpure_farmer,
+  homely_farmer,
 ]
 
 const assets = {
@@ -47,6 +56,9 @@ const assets = {
   bgImage1,
   bgImage2,
   hero_img,
+  hero_farmer,
+  farmerbl_logo,
+  farmerwh_logo,
   ads_icon,
   content_icon,
   marketing_icon,
@@ -65,7 +77,14 @@ const assets = {
   logo_dark,
   menu_icon_dark,
   sun_icon,
-  moon_icon
+  moon_icon,
+  payment_farmer,
+  bulk_farmer,
+  direct_farmer,
+  bg_removedlogo,
+  dg_removed,
+  wh_cart,
+  black_cart
 }
 
 export default assets

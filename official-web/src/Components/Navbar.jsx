@@ -2,10 +2,46 @@ import assets from "../assets/assets";
 import React, { useState } from "react";
 import ThemeToggleBtn from "./ThemeToggleBtn";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 
 const Navbar = ({ theme, setTheme }) => {
      const [sidebarOpen,setSidebarOpen] =  useState(false);
+    //  const navigate = useNavigate();
+    //  const location = useLocation();
+
+//     const handleCartToggle = () => {
+//       if (location.pathname === "/shoppingcart") {
+//            navigate("/");        // bag is open → close it (go home)
+//       } else {
+//          navigate("/shoppingcart"); // bag closed → open it
+//      }
+// };
+
+const navigate = useNavigate();
+const location = useLocation();
+
+const goToSection = (id) => {
+  // If NOT on home, go home first
+
+  if(!id){
+     window.scrollTo({ top: 0, behavior: "smooth" });
+  }else if (location.pathname !== "/") {
+    navigate("/");
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  } else {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  setSidebarOpen(false);
+};
+
+
+
+
   return (
  
     <motion.div
@@ -20,9 +56,9 @@ const Navbar = ({ theme, setTheme }) => {
 
       
       <img
-        src={theme === "dark" ? assets.logo_dark : assets.logo}
+        src={theme === "dark" ? assets.bg_removedlogo : assets.bg_removedlogo}
         alt="logo"
-        className="w-32 sm:w-40"
+        className="w-32 sm:w-40 rounded-xl"
       />
 
       <div
@@ -37,36 +73,52 @@ const Navbar = ({ theme, setTheme }) => {
 
 
 
-        <a onClick={()=>setSidebarOpen(false)}  href="#"  className="sm:hover:border-b">
+        
+        <button onClick={() => goToSection("")} className="sm:hover:border-b">
           Home
-        </a>
-        <a onClick={()=>setSidebarOpen(false)}  href="#services" className="sm:hover:border-b">
-          Services
-        </a>
-        <a onClick={()=>setSidebarOpen(false)} href="#our-work"  className="sm:hover:border-b">
-          Our Work
-        </a>
-        <a onClick={()=>setSidebarOpen(false)} href="#contact-us"  className="sm:hover:border-b">
-          Contact Us
-        </a>
+        </button>
+        
+        <button onClick={() => goToSection("services")} className="sm:hover:border-b">
+         Services
+        </button>
+        
+
+        <button onClick={() => goToSection("our-work")} className="sm:hover:border-b">
+         Our Work
+        </button>
+
+        
+
+
+        <button onClick={() => goToSection("contact-us")} className="sm:hover:border-b">
+        Contact Us
+        </button>
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
+
+        <Link to="/cart">
+           <img
+         src={theme === 'dark' ? assets.wh_cart : assets.black_cart}
+         alt=""
+         className="w-8 cursor-pointer"
+        
+        />
+
+        </Link>
 
         <ThemeToggleBtn theme={theme} setTheme={setTheme}/>
 
 
         <img src={theme === 'dark' ? assets.menu_icon_dark : assets.menu_icon} alt=""  onClick={()=>setSidebarOpen(true)} className="w-8 sm:hidden"/>
+     
+        
 
-        <a
-          href="#contact-us"
-          className="flex bg-primary gap-2 text-white rounded-full   text-sm max-sm:hidden 
+         <button onClick={() => goToSection("contact-us")} className="flex bg-secondary gap-2 text-white rounded-full   text-sm max-sm:hidden 
            items-center  px-6 py-2 
-           cursor-pointer hover:scale-103 transition-all
-          "
-        >
-          Connect <img src={assets.arrow_icon} alt="arrow" width={14} />
-        </a>
+           cursor-pointer hover:scale-103 transition-all">
+           Sign in / Login <img src={assets.arrow_icon} alt="arrow" width={14} />
+        </button>
       </div>
     </motion.div>
   );

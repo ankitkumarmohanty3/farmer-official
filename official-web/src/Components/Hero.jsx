@@ -14,7 +14,7 @@ const Hero = () => {
       viewport={{once:true}}
    className='inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full'>
     <img src={assets.group_profile} alt="" className='w-20' />
-    <p className='text-xs font-medium'>Trusted by 10K+ people</p>
+    <p className='text-xs font-medium'>Connecting 2k+ farmers and vendors</p>
    </motion.div>
 
    <motion.h1  
@@ -22,14 +22,14 @@ const Hero = () => {
       whileInView={{opacity:1,y:0}}
       transition={{duration:0.6,delay:0.8}}
       viewport={{once:true}}
-   className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-[95px] max-w-5xl'>Turning imagination into <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'>digital</span> impact.</motion.h1>
+   className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-[95px] max-w-5xl'>Transforming local farming into <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'>digital</span> empowerment.</motion.h1>
 
    <motion.p 
       initial= {{opacity:0,y:30}}
       whileInView={{opacity:1,y:0}}
       transition={{duration:0.5,delay:1}}
       viewport={{once:true}}
-   className='text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'>Creating meaningful connections and turning big ideas into interactive digital experiences.</motion.p>
+   className='text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'>Building meaningful connections and turning local harvests into interactive digital marketplaces.</motion.p>
 
    <motion.div
       initial= {{opacity:0,scale:0.9}}
@@ -37,7 +37,7 @@ const Hero = () => {
       transition={{duration:0.6,delay:2}}
       viewport={{once:true}}
    className='relative'>
-     <img src={assets.hero_img} alt="" className='w-full max-w-6xl' />
+     <img src={assets.hero_farmer} alt="" className='w-full max-w-6xl rounded-2xl' />
      <img src={assets.bgImage1} alt="" className='absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden' />
    </motion.div>
     </div>

@@ -7,31 +7,32 @@ import {motion} from 'framer-motion'
 const OurWork = () => {
    const workData = [
     {
-      title:'Mobile app marketing',
-      decription:'We turn bold ideas into powerful digital solutions that connect, engage...',
-      images:assets.work_mobile_app
+      title:'Secure Digital Payments & Settlements',
+      decription:'We enable fast, secure digital payments that ensure transparent and reliable settlements between farmers and buyers.',
+      images:assets.payment_farmer
     },
      {
-      title:'Dashboard management',
-      decription:'We help you execute your plan and deliver results.',
-      images:assets.work_dashboard_management
+      title:'Bulk Order & B2B Sales Management',
+      decription:'We enable efficient bulk selling and B2B transactions, helping farmers and buyers manage large orders with ease.',
+      images:assets.bulk_farmer
     },
      {
-      title:'Fitness app promotion',
-      decription:'We help you create a marketing strategy that drives results.',
-      images:assets.work_fitness_app
+      title:'Direct Marketplace Access',
+      decription:'We connect farmers directly with buyers, enabling transparent trading without intermediaries.',
+      images:assets.direct_farmer
     }
    ]
   return (
     <motion.div 
        initial="hidden"
+       
         whileInView = "visible"
         viewport = {{once:true}}
         transition={{staggerChildren:0.2}}
     id='our-work' className='flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700
                                  dark:text-white dark:bg-black 
                             '>
-     <Title title='Our latest work' desc='From strategy to execution, we craft digital solutions that move your business forward. '/>
+     <Title title='Our latest work' desc='We simplify the journey from farm produce to consumer markets through technology. '/>
 
      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl'>
         {
